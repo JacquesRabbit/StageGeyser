@@ -1,0 +1,22 @@
+{
+  "name": "stagegeyser",
+  "version": "1.0.0",
+  "description": "Stage blocking and design software",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacquesRabbit/StageGeyser.git"
+  },
+  "author": "Jack Rabbidge",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JacquesRabbit/StageGeyser/issues"
+  },
+  "homepage": "https://github.com/JacquesRabbit/StageGeyser#readme",
+  "dependencies": {
+    "electron": "^20.0.2"
+  }
+}
