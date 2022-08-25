@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JacquesRabbit/StageGeyser#readme",
   "dependencies": {
     "electron": "^20.0.2",
-    "fountain-js": "^1.0.0"
+    "fountain-js": "^1.0.0",
+    "split-html": "^1.1.0"
   }
 }

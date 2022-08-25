@@ -1,7 +1,9 @@
 //Declare dependencies
-const {app, BrowserWindow, ipcMain, dialog, Menu, MenuItem} = require('electron')
+const {app, BrowserWindow, ipcMain, dialog, Menu} = require('electron')
 const path = require('path')
 const fs = require("fs")
+const { Fountain } = require('fountain-js')
+const fountain = new Fountain
 //Declare the window creating function
 var window
 function createWindow () {
@@ -11,6 +13,7 @@ function createWindow () {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
+    
   })
   mainWindow.loadFile('index.html')
   window = mainWindow
@@ -38,14 +41,22 @@ const menu = Menu.buildFromTemplate([
             if(canceled) {
                 return
             } else {
-                let output = fs.readFileSync(filePaths[0])
-                return output
-            }
+                let fileHTML = fountain.parse(fs.readFileSync(filePaths[0], {
+                  encoding: "ascii"
+                })).html
+                output = fileHTML.script
 
-            window.webContents.send("openFile", fs.readFileSync)
+            window.webContents.send("open-file", output)
+            }
         },
         label: 'Open',
       },
+      {
+        click: async () => {
+          window.webContents.send("close-file")
+      },
+      label: 'Close',
+      }
       ]
     }
 ])
