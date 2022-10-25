@@ -1,20 +1,30 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:StageGeyser.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="StageGeyser.MainWindow"
+        x:Class="StageGeyser.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
         Title="StageGeyser">
 
-    <Panel Name="WindowPanel">
-        <DockPanel Name="ControlBar" VerticalAlignment="Top" Height="50" Background="Gray">
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <DockPanel Name="WindowPanel">
+        <DockPanel Name="ControlBar" 
+        VerticalAlignment="Top" 
+        Height="50" 
+        Background="Gray"
+        DockPanel.Dock="Top">
             <DockPanel Name="ControlButtons" HorizontalAlignment="Right">
                 <Button Name="OpenButton" Command="{Binding OpenFile}">
                     Open
                 </Button>
             </DockPanel>
         </DockPanel>
-    </Panel>
-
+        <TextBlock Name="Document" Text="{Binding doc}" Background="Red"/>
+    </DockPanel>
 
 </Window>
