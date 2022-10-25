@@ -5,5 +5,16 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="StageGeyser.MainWindow"
         Title="StageGeyser">
-    Welcome to Avalonia!
+
+    <Panel Name="WindowPanel">
+        <DockPanel Name="ControlBar" VerticalAlignment="Top" Height="50" Background="Gray">
+            <DockPanel Name="ControlButtons" HorizontalAlignment="Right">
+                <Button Name="OpenButton" Command="{Binding OpenFile}">
+                    Open
+                </Button>
+            </DockPanel>
+        </DockPanel>
+    </Panel>
+
+
 </Window>
