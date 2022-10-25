@@ -24,7 +24,7 @@
                 </Button>
             </DockPanel>
         </DockPanel>
-        <TextBlock Name="Document" Text="{Binding doc}" Background="Red"/>
+        <TextBlock Name="Document" Text="{Binding DocumentContent}" Background="Red"/>
     </DockPanel>
 
 </Window>
