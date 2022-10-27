@@ -5,15 +5,15 @@
     Break: True
 }
 {
-    Type: Table of Contents
+    Type: Contents
     Name: Table of Contents
 }
 {
     Type: Characters
-    Name: Character Description
+    Name: Character List
 }
 {
     Type: Scenes
-    Name: Scene Description
+    Name: Scene List
 }
 
