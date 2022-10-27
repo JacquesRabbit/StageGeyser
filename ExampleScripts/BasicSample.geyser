@@ -1,0 +1,19 @@
+{
+    Type: Title
+    Name: Title Page
+    Author: Jack Rabbidge
+    Break: True
+}
+{
+    Type: Table of Contents
+    Name: Table of Contents
+}
+{
+    Type: Characters
+    Name: Character Description
+}
+{
+    Type: Scenes
+    Name: Scene Description
+}
+

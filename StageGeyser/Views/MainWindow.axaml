@@ -12,19 +12,27 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <DockPanel Name="WindowPanel">
+    <DockPanel Name="WindowGrid">
         <DockPanel Name="ControlBar" 
+        DockPanel.Dock="Top"
         VerticalAlignment="Top" 
         Height="50" 
-        Background="Gray"
-        DockPanel.Dock="Top">
-            <DockPanel Name="ControlButtons" HorizontalAlignment="Right">
+        Background="Gray">
+            <DockPanel Name="ControlButtons"
+            HorizontalAlignment="Right">
                 <Button Name="OpenButton" Command="{Binding OpenFile}">
                     Open
                 </Button>
             </DockPanel>
         </DockPanel>
-        <TextBlock Name="Document" Text="{Binding DocumentContent}" Background="Red"/>
+        <ScrollViewer>
+            <DockPanel Name="Document">
+                <StackPanel
+                >
+
+                </StackPanel>
+            </DockPanel>
+        </ScrollViewer>
     </DockPanel>
 
 </Window>
