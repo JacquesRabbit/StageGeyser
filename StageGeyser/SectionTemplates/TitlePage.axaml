@@ -1,0 +1,13 @@
+<Control
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="StageGeyser.SectionTemplates.TitlePage">
+    <Panel>
+        <Label Name="Title"></Label>
+        <Label Name="Subtitle"></Label>
+        <Label Name="Credit"></Label>
+        <Label Name="PageBreak"></Label>
+        <Label Name="Note"></Label>
+    </Panel>
+</Control>
+

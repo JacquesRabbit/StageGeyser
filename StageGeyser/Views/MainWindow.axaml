@@ -27,10 +27,8 @@
         </DockPanel>
         <ScrollViewer>
             <DockPanel Name="Document">
-                <StackPanel
-                >
-
-                </StackPanel>
+                <Control>
+                </Control>
             </DockPanel>
         </ScrollViewer>
     </DockPanel>

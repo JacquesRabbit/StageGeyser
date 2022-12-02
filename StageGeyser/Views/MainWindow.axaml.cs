@@ -8,5 +8,6 @@ namespace StageGeyser.Views
         {
             InitializeComponent();
         }
+        
     }
 }

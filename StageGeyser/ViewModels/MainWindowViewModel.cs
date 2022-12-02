@@ -1,19 +1,15 @@
 ﻿namespace StageGeyser.ViewModels
 {
     using ReactiveUI;
+    using System.Collections.Generic;
     using StageGeyser.Models;
+    using StageGeyser.Geyser;
+    using Avalonia.Controls;
     public class MainWindowViewModel : ViewModelBase
     {
-        private string documentContent = "Open A File...";
-        public string DocumentContent {
-            get => documentContent;
-            set => this.RaiseAndSetIfChanged(ref documentContent, value);
-        }
+        private GeyserDocument currentDocument;
         public MainWindowViewModel() {
-
-        }
-        public async void OpenFile() {
-            DocumentContent = await FileManager.Open();
+            currentDocument = new GeyserDocument();
         }
     }
 }

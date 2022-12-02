@@ -15,8 +15,9 @@ The app is built on the Avalonia UI framework. I chose Avalonia because it is op
   - [How to Install](#how-to-install)
   - [Geyser File Format](#geyser-file-format)
     - [Sections](#sections)
-      - [Section Type](#section-type)
-      - [Section Name](#section-name)
+      - [Type](#type)
+      - [Name](#name)
+      - [Numbers](#numbers)
     - [Section Types](#section-types)
 
 ## How to Install
@@ -36,7 +37,7 @@ Geyser files are divided into sections, each defined by properties which StageGe
 
 However, different section `Type`s have their own properties, as described below.
 
-#### Section Type
+#### Type
 
 There are a number of section types that the Geyser interpreter recognises by default. These include:
 - Title (Title Page)
@@ -48,8 +49,12 @@ There are a number of section types that the Geyser interpreter recognises by de
 
 The interpreter uses this property to inform its formatting of the Geyser markup contained within the rest of the section. If a `Type` is not defined within a section, it will default to `Stage`. A more detailed list of the available section types is available [below](#section-types)
 
-#### Section Name
+#### Name
 
-The `Name` property is used to inform StageGeyser what to use when referring to the section in the project navigator
+The `Name` property is used to inform StageGeyser what to use when labelling a section in UI, such as the project navigator. It has no effect on 
+
+#### Numbers
+
+Can be set as `None`, `Self` or `Total` if the provided value is invalid, or if no value is provided. Controls whether StageGeyser lists 
 
 ### Section Types
