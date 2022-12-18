@@ -12,25 +12,6 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <DockPanel Name="WindowGrid">
-        <DockPanel Name="ControlBar" 
-        DockPanel.Dock="Top"
-        VerticalAlignment="Top" 
-        Height="50" 
-        Background="Gray">
-            <DockPanel Name="ControlButtons"
-            HorizontalAlignment="Right">
-                <Button Name="OpenButton" Command="{Binding OpenFile}">
-                    Open
-                </Button>
-            </DockPanel>
-        </DockPanel>
-        <ScrollViewer>
-            <DockPanel Name="Document">
-                <Control>
-                </Control>
-            </DockPanel>
-        </ScrollViewer>
-    </DockPanel>
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
 </Window>

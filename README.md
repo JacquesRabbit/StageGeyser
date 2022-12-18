@@ -13,48 +13,11 @@ The app is built on the Avalonia UI framework. I chose Avalonia because it is op
 - [StageGeyser](#stagegeyser)
   - [Table of Contents](#table-of-contents)
   - [How to Install](#how-to-install)
-  - [Geyser File Format](#geyser-file-format)
-    - [Sections](#sections)
-      - [Type](#type)
-      - [Name](#name)
-      - [Numbers](#numbers)
-    - [Section Types](#section-types)
+  - [PXML File Format](#pxml-file-format)
 
 ## How to Install
 
 StageGeyser is currently being developed. It lacks the features necessary for a full release, and is thus not available to install. Installation instructions will be available here when the app is in a releasable state.
 
-## Geyser File Format
-Files ending in the `.geyser` file extension are Geyser script files. This is a file format based on the existing Fountain markup language, designed for a more nuanced use case. A description of the standards is shown below. Note that one does not have to understand the Geyser file format to effectively use StageGeyser, as most of its nuances are handled automatically through the app's UI controls. That being said, having an understanding of the language can make working in StageGeyser faster and enable you to edit StageGeyser scripts with a plain text editor, rather than the software itself.
-
-### Sections
-Geyser files are divided into sections, each defined by properties which StageGeyser uses to identify and format it. A section is started with a line with only an opening curly brace `{` and ends with a line with only `}`. Anything within the curly braces is considered part of that section. Properties can be defined using a `key: value` pair. While you can technically assign any string as a property key, the interpreter will ignore any it doesn't recognise. The basic section properties that apply to all sections are:
-
-- Type
-- Name
-- Number
-- Break
-
-However, different section `Type`s have their own properties, as described below.
-
-#### Type
-
-There are a number of section types that the Geyser interpreter recognises by default. These include:
-- Title (Title Page)
-- Contents (Table of Contents)
-- Characters (Character List)
-- Scenes (Scene List)
-- Stage (Stage Script)
-- Screen (Screen Script)
-
-The interpreter uses this property to inform its formatting of the Geyser markup contained within the rest of the section. If a `Type` is not defined within a section, it will default to `Stage`. A more detailed list of the available section types is available [below](#section-types)
-
-#### Name
-
-The `Name` property is used to inform StageGeyser what to use when labelling a section in UI, such as the project navigator. It has no effect on 
-
-#### Numbers
-
-Can be set as `None`, `Self` or `Total` if the provided value is invalid, or if no value is provided. Controls whether StageGeyser lists 
-
-### Section Types
+## PXML File Format
+Files ending in the `.pxml` file extension are Geyser script files. GXML (Play eXtensible Markup Language) is a superset of XML created to make the code for parsing and writing files simpler. Geyser scripts were originally stored in plain text for human readability, much like Fountain scripts. In early stages, this quickly became cumbersome as the app would have to frequently and repeatedly parse a lot of text processing functions just to read or write a file. So PXML was born. It consists of a number of custom elements and implementation quirks which can be foudn in the documentation (not yet created).
