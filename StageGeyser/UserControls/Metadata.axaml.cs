@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace StageGeyser.UserControls
 {
-    public partial class Metadata : UserControl
+    public partial class MetadataPanel : UserControl
     {
-        public Metadata()
+        public MetadataPanel()
         {
             InitializeComponent();
         }

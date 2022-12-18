@@ -11,7 +11,10 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <DockPanel>
+        <Button Name="OpenButton" Command="{Binding OpenFile}">
+            Open
+        </Button>
+        <TextBlock Background="Gray" Text="{Binding DocumentContent}"/>
+        </DockPanel>
 </Window>
