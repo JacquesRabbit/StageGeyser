@@ -1,13 +1,15 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using ReactiveUI;
-
+using StageGeyser.SGXML;
+using StageGeyser.Geyser;
 namespace StageGeyser.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private string documentContent = "TempContent";
-        public string DocumentContent {
+        Script? script;
+        private Control documentContent = new Control();
+        public Control DocumentContent {
             get => documentContent;
             set => this.RaiseAndSetIfChanged(ref documentContent, value);
         }
@@ -21,7 +23,9 @@ namespace StageGeyser.ViewModels
             if(filePathsNullable != null) {
                 filePath = filePathsNullable[0];
             }
-            this.DocumentContent = filePath;
+            this.script = new Script(SGXMLParser.ReadFile(filePath));
+            this.DocumentContent = script.GenerateControl();
+            
         }
     }
 }

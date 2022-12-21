@@ -15,6 +15,6 @@
         <Button Name="OpenButton" Command="{Binding OpenFile}">
             Open
         </Button>
-        <TextBlock Background="Gray" Text="{Binding DocumentContent}"/>
+        <DocumentViewer/>
         </DockPanel>
 </Window>

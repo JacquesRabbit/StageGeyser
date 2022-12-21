@@ -1,0 +1,25 @@
+<Script name="NECROMANCE" author="Jack Rabbidge">
+    <TitlePage>
+        <Title>
+            The NECROMANCE
+        </Title>
+        <Credit>
+            Jack Rabbidge
+        </Credit>
+        <Subtitle>
+        The Not-Endless Choral Romance Of Man And Necrotically Charming Empress
+        </Subtitle>
+    </TitlePage>
+    <CharacterList>
+        <Character name="Mark" fullname="Markus Jindosh" role="lead">The Male Lead</Character>
+        <Character name="Alice" fullname="Alice Watson" role="lead">The Female Lead</Character>
+        <Character name="Jacob" fullname="Jacob" role="supporting">Mark's Best Friend</Character>
+        <Character name="Paula" fullname="Paula Watson" role="supporting">Alice's Mother</Character>
+    </CharacterList>
+    <Act>
+        <Scene>
+            <Namecharacter="mark">Mark</Name>
+            <Dialogue>I hate Mondays</Dialogue>
+        </Scene>
+    </Act>
+</Script>
